@@ -56,7 +56,7 @@ $database=json_decode(file_get_contents('./database.json'),true);
                         <p class="designation"><?= $person['intro']["designation2"] ?></p>
                         <p class="designation">
                         <?php
-                        for($i=0;$i<$person["intro"]["year"];$i++){echo "&#9824";};
+                        for($j=0;$j<$person["intro"]["year"];$j++){echo "&#9824";};
                         ?>
                         </p>
                     </div>
