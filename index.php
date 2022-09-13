@@ -1,11 +1,9 @@
-<?php
-$name = "Hai Hoang";
-$imgURL = ".\assets\images\photo.jpg";
-$imgAttributes = 'width="400" height="300"';
-$designation1 = "CompSci Senior";
-$designation2 = "CEO of himself"
 
+
+<?php
+$database=json_decode(file_get_contents('./database.json'),true);
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -37,87 +35,42 @@ $designation2 = "CEO of himself"
         </div>
         <div class="row">
 
-            <!-- Single Advisor-->
-            <div class="col-12 col-sm-6 col-lg-3">
+
+        <?php
+			$i=0;
+			foreach($database as $person){
+				?>
+				
+				            <!-- Single Advisor-->
+                            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                     <!-- Team Thumb-->
-                    <div class="advisor_thumb"><a href="detail.php"><img src=<?= $imgURL ?> alt="" <?= $imgAttributes ?>></a>
+                    <div class="advisor_thumb"><a href="game.php?index=<?= $i ?>"><img src=<?= $person['intro']["imgURL"] ?> alt="" width="400px" height="300px"></a>
                         <!-- Social Info-->
-                        <div class="social-info"><a href="detail.php"><i class="fa fa-facebook"></i></a><a href="detail.php"><i class="fa fa-twitter"></i></a><a href="detail.php"><i class="fa fa-linkedin"></i></a></div>
+                        <div class="social-info"><a href="game.php?index=<?= $i ?>"><i class="fa fa-facebook"></i></a><a href="detail.php"><i class="fa fa-twitter"></i></a><a href="detail.php"><i class="fa fa-linkedin"></i></a></div>
                     </div>
                     <!-- Team Details-->
                     <div class="single_advisor_details_info">
-                        <h6><?= $name ?></h6>
-                        <p class="designation"><?= $designation1 ?></p>
-                        <p class="designation"><?= $designation2 ?></p>
+                        <h6><?= $person['intro']["name"] ?></h6>
+                        <p class="designation"><?= $person['intro']["designation1"] ?></p>
+                        <p class="designation"><?= $person['intro']["designation2"] ?></p>
                     </div>
                 </div>
             </div>
 
 
 
+				<?php
+				$i++;
+			}
+		
+		?>
+        
 
-            <!-- Single Advisor-->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                    <!-- Team Thumb-->
-                    <div class="advisor_thumb"><a href="detail.php"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a>
-                        <!-- Social Info-->
-                        <div class="social-info"><a href="detail.php"><i class="fa fa-facebook"></i></a><a href="detail.php"><i class="fa fa-twitter"></i></a><a href="detail.php"><i class="fa fa-linkedin"></i></a></div>
-                    </div>
-                    <!-- Team Details-->
-                    <div class="single_advisor_details_info">
-                        <h6>Samantha Sarah</h6>
-                        <p class="designation">Founder &amp; CEO</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Advisor-->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <!-- Team Thumb-->
-                    <div class="advisor_thumb"><a href="detail.php"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt=""></a>
-                        <!-- Social Info-->
-                        <div class="social-info"><a href="detail.php"><i class="fa fa-facebook"></i></a><a href="detail.php"><i class="fa fa-twitter"></i></a><a href="detail.php"><i class="fa fa-linkedin"></i></a></div>
-                    </div>
-                    <!-- Team Details-->
-                    <div class="single_advisor_details_info">
-                        <h6>Nazrul Islam</h6>
-                        <p class="designation">UI Designer</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Advisor-->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                    <!-- Team Thumb-->
-                    <div class="advisor_thumb"><a href="detail.php"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt=""></a>
-                        <!-- Social Info-->
-                        <div class="social-info"><a href="detail.php"><i class="fa fa-facebook"></i></a><a href="detail.php"><i class="fa fa-twitter"></i></a><a href="detail.php"><i class="fa fa-linkedin"></i></a></div>
-                    </div>
-                    <!-- Team Details-->
-                    <div class="single_advisor_details_info">
-                        <h6>Riyadh Khan</h6>
-                        <p class="designation">Developer</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Advisor-->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <!-- Team Thumb-->
-                    <div class="advisor_thumb"><a href="detail.php"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt=""></a>
-                        <!-- Social Info-->
-                        <div class="social-info"><a href="detail.php"><i class="fa fa-facebook"></i></a><a href="detail.php"><i class="fa fa-twitter"></i></a><a href="detail.php"><i class="fa fa-linkedin"></i></a></div>
-                    </div>
-                    <!-- Team Details-->
-                    <div class="single_advisor_details_info">
-                        <h6>Niloy Islam</h6>
-                        <p class="designation">Marketing Manager</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+
+          
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

@@ -1,23 +1,7 @@
 <?php
-/*variables*/
-$imgURL = ".\assets\images\photo.jpg";
-$imgAttributes = 'width="400" height="300"';
-$myName = "Hoang Vu Hai";
-$profession = "Full stack developer";
-$company = "Meta";
-$email = "email@mymail.nku.edu";
-$short_intro = "Compsci senior at NKU";
-$plans = "Graduate, earn an income, buy a house, marry a female, have 3 kids and 9 grandchildren";
-$quote = "“No man has the right to be an amateur in the matter of physical training. It is a shame for a man to grow old without seeing the beauty and strength of which his body is capable.”― Socrates";
-$skill_one = "Javascript";
-$skill_one_percentage = 60;
-$skill_two = "Python";
-$skill_two_percentage = 75;
-$skill_three = "Fat percentage";
-$skill_three_percentage = 22;
-$fun_fact = "My favorite food is balut. Its an east asian dish and its just a duck egg but the egg is just a few days from hatching. It looks and smells bad but it is very dense in nutrition. Another dish I like is blood sausage. It is not actually exclusively an asian dish, Europeans have them too. Its very dense in iron and it tastes nice.";
+$database=json_decode(file_get_contents('./database.json'),true);
+$person = $database[$_GET["index"]]["detail"];
 ?>
-
 
 
 <html lang="en">
