@@ -45,15 +45,20 @@ $database=json_decode(file_get_contents('./database.json'),true);
                             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                     <!-- Team Thumb-->
-                    <div class="advisor_thumb"><a href="game.php?index=<?= $i ?>"><img src=<?= $person['intro']["imgURL"] ?> alt="" width="400px" height="300px"></a>
+                    <div class="advisor_thumb"><a href="detail.php?index=<?= $i ?>"><img src=<?= $person['intro']["imgURL"] ?> alt="" width="400px" height="300px"></a>
                         <!-- Social Info-->
-                        <div class="social-info"><a href="game.php?index=<?= $i ?>"><i class="fa fa-facebook"></i></a><a href="detail.php"><i class="fa fa-twitter"></i></a><a href="detail.php"><i class="fa fa-linkedin"></i></a></div>
+                        <div class="social-info"><a href="detail.php?index=<?= $i ?>"><i class="fa fa-facebook"></i></a><a href="detail.php"><i class="fa fa-twitter"></i></a><a href="detail.php"><i class="fa fa-linkedin"></i></a></div>
                     </div>
                     <!-- Team Details-->
                     <div class="single_advisor_details_info">
                         <h6><?= $person['intro']["name"] ?></h6>
                         <p class="designation"><?= $person['intro']["designation1"] ?></p>
                         <p class="designation"><?= $person['intro']["designation2"] ?></p>
+                        <p class="designation">
+                        <?php
+                        for($i=0;$i<$person["intro"]["year"];$i++){echo "&#9824";};
+                        ?>
+                        </p>
                     </div>
                 </div>
             </div>
