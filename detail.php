@@ -1,6 +1,11 @@
 <?php
 $database=json_decode(file_get_contents('./database.json'),true);
 $person = $database[$_GET["index"]]["detail"];
+require __DIR__.'/functions.php';
+$birth = $person['birth'];
+$age = calc_Age($birth,todays_Date());
+$time_diff = calc_Time_Diff($birth,todays_Date()) ;
+
 ?>
 
 <!doctype html>
@@ -57,6 +62,15 @@ $person = $database[$_GET["index"]]["detail"];
               <span class="w-25 text-black font-weight-normal">Email: </span>
               <label class="media-body"><?= $person["email"] ?></label>
             </li>
+            <li class="media">
+              <span class="w-25 text-black font-weight-normal">Age:</span>
+              <label class="media-body"><?= $age ?></label>
+            </li>
+            <li class="media">
+              <span class="w-25 text-black font-weight-normal">Time since birth:</span>
+              <label class="media-body"><?= $time_diff[0] ?> years,<?= $time_diff[1] ?> months, <?= $time_diff[2] ?>days</label>
+            </li>
+
             <li><a class="btn btn-primary" href="index.php" role="button">Go back to index</a></li>
           </ul>
         </div>

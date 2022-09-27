@@ -1,3 +1,4 @@
+
 {
     "0":{
         "intro":{
@@ -5,9 +6,8 @@
             "imgURL" : ".\\assets\\images\\photo.jpg",
             "designation1" : "CompSci Senior",
             "designation2" : "CEO of himself",
-            "year":4
-
-
+            "year":4,
+            "birth": "2000-12-27"
         },
         "detail":{
                 "imgURL" : ".\\assets\\images\\photo.jpg",
@@ -24,7 +24,8 @@
                 "skill_two_percentage" : 75,
                 "skill_three" : "Fat percentage",
                 "skill_three_percentage" : 22,
-                "fun_fact" : "My favorite food is balut. Its an east asian dish and its just a duck egg but the egg is just a few days from hatching. It looks and smells bad but it is very dense in nutrition. Another dish I like is blood sausage. It is not actually exclusively an asian dish, Europeans have them too. Its very dense in iron and it tastes nice."
+                "fun_fact" : "My favorite food is balut. Its an east asian dish and its just a duck egg but the egg is just a few days from hatching. It looks and smells bad but it is very dense in nutrition. Another dish I like is blood sausage. It is not actually exclusively an asian dish, Europeans have them too. Its very dense in iron and it tastes nice.",
+            "birth": "2000-12-27"
         }
     },
     "1":{
@@ -33,7 +34,8 @@
             "imgURL" : "https://bootdey.com/img/Content/avatar/avatar1.png",
             "designation1" : "Founder",
             "designation2" : "CEO",
-            "year":3
+            "year":3,
+            "birth": "2000-11-27"
 
 
         },
@@ -52,7 +54,8 @@
                 "skill_two_percentage" : 75,
                 "skill_three" : "Musclemass",
                 "skill_three_percentage" : 80,
-                "fun_fact" : "I like long walks on the beach."
+                "fun_fact" : "I like long walks on the beach.",
+                "birth": "2000-11-27"
         }
     },
     "2":{
@@ -61,7 +64,8 @@
             "imgURL" : "https://bootdey.com/img/Content/avatar/avatar6.png",
             "designation1" : "Developer",
             "designation2" : "CEO",
-            "year":2
+            "year":2,
+            "birth": "2003-6-27"
 
 
         },
@@ -80,7 +84,8 @@
                 "skill_two_percentage" : 75,
                 "skill_three" : "Personality",
                 "skill_three_percentage" : 10 ,
-                "fun_fact" : "I have an extra thumb."
+                "fun_fact" : "I have an extra thumb.",
+                "birth": "2003-6-27"
         }
     }
     
